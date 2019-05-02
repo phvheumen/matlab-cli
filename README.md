@@ -10,7 +10,7 @@ One can verify the compiler used for this tool with `mex -setup -client engine c
 Furthermore make sure that the dynamic libraries path are added to the correct environment variables depending on the platform.
 Inform https://nl.mathworks.com/help/matlab/matlab_external/build-c-engine-programs.html for the locations.
 
-Note: It seems the Windows paths are incorrectly indicated on the Mathworks website. The following path must be added to PATH on Windows:
+_Note: It seems the Windows paths are incorrectly indicated on the Mathworks website. The following path must be added to PATH on Windows:_
 `<matlabroot>\extern\bin\win64`
 
 compile with command `mex -client engine matlab-cli.cpp`
@@ -33,7 +33,7 @@ ans =
 >>
 ```
 
-Run scripts. Here a dummy script `gen_seq` is used that is used to generate the 10 first numbers of the Fibonacci sequence.
+Run scripts. Here a dummy script `gen_seq.m` is used that is used to generate the 10 first numbers of the Fibonacci sequence.
 ```
 C:\matlab-cli>matlab-cli gen_seq
 
