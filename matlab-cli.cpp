@@ -10,6 +10,12 @@ int main(int argc, char **argv)
 
         if (argc == 1)
         {
+            auto out = std::make_shared<std::basic_stringbuf<char16_t>>();            
+            matlabPtr->eval(u"disp(['MATLAB ', version]);", out);
+            
+            matlab::engine::String out_ = out.get()->str();
+            std::cout << matlab::engine::convertUTF16StringToUTF8String(out_);
+            
             while (matlabPtr != nullptr)
             {
                 auto out = std::make_shared<std::basic_stringbuf<char16_t>>();
